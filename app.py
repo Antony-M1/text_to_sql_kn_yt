@@ -6,6 +6,7 @@ load_dotenv()
 import streamlit as st
 import os
 import sqlite3
+import traceback
 
 import google.generativeai as genai
 
@@ -16,9 +17,13 @@ genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 # Funtion to load the google Grmini Model and provide SQL query as response
 def get_gemini_response(question, prompt):
-    model = genai.GenerativeModel("gemini-pro")
-    response = model.generate_content([prompt, question])
-    return response.text
+    try:
+        model = genai.GenerativeModel("gemini-pro")
+        response = model.generate_content([prompt[0], question])
+        return response.text
+    except:
+        print("Getting Error From get_gemini_response ============================================== ")
+        traceback.print_exc()
 
 ## Funtion to retrive query from the SQL database
 def read_sql_query(sql, db):

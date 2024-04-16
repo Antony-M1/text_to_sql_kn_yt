@@ -9,3 +9,9 @@ Implementation
 
 1. SQLlite --> Insert some Recods --> Pyton Programing
 2. LLM Application--->gemini Pro--->SQL Database.
+
+
+## Run Streamlit APP
+```cmd
+streamlit run app.py
+```
