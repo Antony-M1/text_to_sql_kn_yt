@@ -1,5 +1,7 @@
 # [Text To SQL](https://www.youtube.com/watch?v=wFdFLWc-W4k&t=488s)
 
+Here the [Youtube videos](https://www.youtube.com/watch?v=wFdFLWc-W4k)
+
 The agenda is to conver the text into SQL application.
 
 Prompt--->LLM--->GRmini Pro--->Query--->SQL Database--->Response
